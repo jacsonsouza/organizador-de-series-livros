@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    //form>input*2+button{Calcular}
+    <form onsubmit="onSubmit()">
+      <input type="number" id="numer1Imput" />
+      <input type="number" id="numer2Imput" />
+      <select id="operadorSelect">
+        <option value="+">soma</option>
+        <option value="-">subtração</option>
+        <option value="*">multiplicação</option>
+        <option value="/">divisão</option>
+      </select>
+      <button>Calcular</button>
+    </form>
+    <script>
+      function onSubmit() {
+        const n1 = +document.getElementById("number1Imput").value;
+        const n2 = +document.forms[0].elements[1].value;
+        const operador = document.querySelector("#operatorSelect").value;
+        const resultado = calcula(n1, n2, operator);
+        alert(resultado);
+      }
+
+      let calcula = function (a, b, operator) {
+        switch (operator) {
+          case "+":
+            return a + b;
+          case "-":
+            return a - b;
+          case "*":
+            return a * b;
+          case "/":
+            return a / b;
+          default:
+            console.log("Operador errado");
+        }
+      };
+    </script>
+  </body>
+</html>
