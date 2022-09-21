@@ -1,0 +1,171 @@
+html {
+  background-color: gray;
+}
+
+main {
+  margin-top: 2em;
+}
+/* Estilo navbar */
+nav {
+  background-color: black;
+  height: 65px;
+}
+
+.brand-logo img {
+  height: 64px;
+  margin-left: 0.5em;
+}
+
+nav ul a {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+#div-source {
+  border: solid;
+  background-color: gray;
+  border-radius: 13px;
+  width: 260px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 0.5em;
+}
+
+#text-source {
+  float: left;
+  width: 14em;
+
+  margin-top: -2px;
+  margin-left: 10px;
+}
+
+#lupa {
+  float: left;
+  margin-top: 6px;
+}
+
+/* Estilo side-nav */
+.side-nav {
+  background-color: black;
+}
+
+.side-nav img {
+  height: 64px;
+  margin-top: 1em;
+  margin-left: 8em;
+}
+
+.side-nav #div-source {
+  float: left;
+  margin-top: 1em;
+}
+
+.side-nav div #lupa {
+  float: left;
+  height: 20px;
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+
+.side-nav a {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.container {
+  width: 83%;
+}
+
+/* Estilo carrosel*/
+
+#div-carousel img {
+  width: 80%;
+  height: 80%;
+  margin-left: 6em;
+}
+
+/* Estilos seções*/
+
+hr {
+  border-color: black;
+}
+
+#site-width div {
+  overflow: hidden;
+}
+
+#sessao-pop h4 {
+  color: black;
+  float: left;
+}
+
+#sessao-pop a {
+  color: white;
+  float: right;
+  margin-top: 3em;
+}
+
+/* Estilos cards */
+
+#card-list {
+  overflow: hidden;
+  padding: 0px;
+}
+
+.title {
+  display: none;
+  position: absolute;
+  width: 233px;
+  margin-top: 20em;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cards {
+  width: 233px;
+  height: 350px;
+  margin: 15px;
+  float: left;
+}
+
+.cards img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo para as páginas de cada livros*/
+
+#bloco-topo {
+  overflow: hidden;
+}
+
+.descricao {
+  float: left;
+  text-align: center;
+}
+
+.descricao p,
+h3 {
+  text-align: center;
+}
+
+#bloco-solo {
+  overflow: hidden;
+}
+#bloco-solo p {
+  text-align: justify;
+}
+
+#info-left {
+  float: left;
+  width: 531px;
+}
+
+#info-rigth {
+  float: left;
+}
