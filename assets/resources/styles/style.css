@@ -81,10 +81,13 @@ nav ul a {
 
 /* Estilo carrosel*/
 
+#div-carousel {
+  text-align: center;
+}
+
 #div-carousel img {
   width: 80%;
   height: 80%;
-  margin-left: 6em;
 }
 
 /* Estilos seções*/
@@ -112,7 +115,12 @@ hr {
 
 #card-list {
   overflow: hidden;
-  padding: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
 }
 
 .title {
@@ -126,14 +134,14 @@ hr {
   text-align: center;
 }
 
-.cards {
+.card {
   width: 233px;
   height: 350px;
   margin: 15px;
   float: left;
 }
 
-.cards img {
+.card img {
   width: 100%;
   height: 100%;
 }

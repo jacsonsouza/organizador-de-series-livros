@@ -6,20 +6,24 @@ $(document).ready(function () {
   $("select").formSelect();
 });
 
-const allTitles = document.querySelectorAll(".title");
+const allCards = document.getElementsByClassName("card");
 
-for (let i = 0; i < allTitles.length; i++) {
-  let title = allTitles[i];
+for (let i = 0; i < allCards.length; i++) {
+  let card = allCards[i];
 
-  title.onmouseover = show(title);
+  card.onmouseover = function () {
+    show(card);
+  };
 
-  title.onmouseout = hide(title);
+  card.onmouseout = function () {
+    hide(card);
+  };
 }
 
-function show(title) {
-  title.style.display = "block";
+function show(card) {
+  card.querySelector(".title").style.display = "block";
 }
 
-var hide = function (title) {
-  title.style.display = "none";
+var hide = function (card) {
+  card.querySelector(".title").style.display = "none";
 };
