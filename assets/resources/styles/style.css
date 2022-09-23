@@ -4,6 +4,7 @@ html {
 
 main {
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 /* Estilo navbar */
 nav {
@@ -22,7 +23,7 @@ nav ul a {
   margin-right: 0.5em;
 }
 
-#div-source {
+.div-source {
   border: solid;
   background-color: gray;
   border-radius: 13px;
@@ -32,10 +33,9 @@ nav ul a {
   margin-top: 0.5em;
 }
 
-#text-source {
+input[type="text"] {
   float: left;
   width: 14em;
-
   margin-top: -2px;
   margin-left: 10px;
 }
@@ -117,7 +117,7 @@ hr {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
@@ -176,4 +176,59 @@ h3 {
 
 #info-rigth {
   float: left;
+}
+
+/* Estilo books */
+
+#select-read {
+  width: 233px;
+  margin-left: 14px;
+}
+
+select {
+  display: block;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#questions {
+  display: flex;
+  justify-content: center;
+}
+
+.bt-questions {
+  background-color: black;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+/* Estilo cadastros */
+
+#formulario {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+#formulario-logo {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+}
+
+#formulario-logo img {
+  height: 64px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
 }

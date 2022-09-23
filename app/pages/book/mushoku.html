@@ -85,52 +85,90 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <div id="bloco-topo">
-        <div class="card">
-          <a href="">
-            <div class="title">
-              <p>Mushoku Tensei</p>
-            </div>
-            <img
-              src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/06/Mushoku-Tensei-Jobless-Reincarnation-vol-24-1.jpg?resize=1000%2C1423&ssl=1"
-              alt=""
-            />
-          </a>
+    <main>
+      <div class="container">
+        <div id="bloco-topo">
+          <div class="card">
+            <a href="">
+              <div class="title">
+                <p>Mushoku Tensei</p>
+              </div>
+              <img
+                src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/06/Mushoku-Tensei-Jobless-Reincarnation-vol-24-1.jpg?resize=1000%2C1423&ssl=1"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="descicao">
+            <h3>Mushoku Tensei</h3>
+            <p>
+              Um homem de 34 anos, desempregado e sem perspectivas, é atropelado
+              por um caminhão e reencarna em um mundo fantástico e cheio de
+              feitiçarias no corpo de um bebê. Com o passar do tempo, ele
+              desenvolve grandes habilidades mágicas.
+            </p>
+          </div>
         </div>
-        <div class="descicao">
-          <h3>Mushoku Tensei</h3>
-          <p>
-            Um homem de 34 anos, desempregado e sem perspectivas, é atropelado
-            por um caminhão e reencarna em um mundo fantástico e cheio de
-            feitiçarias no corpo de um bebê. Com o passar do tempo, ele
-            desenvolve grandes habilidades mágicas.
-          </p>
+        <!--Fim do bloco de cima-->
+        <div id="select-read">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Selecione</option>
+            <option value="1" name="completo">Completo</option>
+            <option value="2">Lendo</option>
+            <option value="3">Pausado</option>
+            <option value="4">Lerei</option>
+          </select>
+        </div>
+        <!--Início do bloco de baixo-->
+        <h3>Informações</h3>
+        <hr />
+        <div id="bloco-solo">
+          <div id="info-left">
+            <p>Autor:</p>
+            <p>Data de lançamento:</p>
+            <p>Data de conclusão:</p>
+          </div>
+          <div id="info-rigth">
+            <p>Início da leitura:</p>
+            <p>Término da leitura:</p>
+            <p>Duração da leitura:</p>
+          </div>
+        </div>
+        <!--Fim do bloco de baixo-->
+        <hr />
+        <div id="questions">
+          <button id="bt-questions">Testar seus conhecimentos!</button>
         </div>
       </div>
-      <div>
-        <select name="opcoes" id="opcoes-leitura">
-          <option value="lendo">Lendo</option>
-          <option value="pausado">Pausado</option>
-          <option value="completo">Completo</option>
-        </select>
-      </div>
-      <h3>Informações</h3>
-      <hr />
-      <div id="bloco-solo">
-        <div id="info-left">
-          <p>Autor:</p>
-          <p>Data de lançamento:</p>
-          <p>Data de conclusão:</p>
+    </main>
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">
+              You can use rows and columns here to organize your footer content.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
         </div>
-        <div id="info-rigth">
-          <p>Início da leitura:</p>
-          <p>Término da leitura:</p>
-          <p>Duração da leitura:</p>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
       </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    </footer>
+    <script src="/organizador-de-series-livros/node_modules/jquery/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="/organizador-de-series-livros/app/pages/book/book.js"></script>
   </body>

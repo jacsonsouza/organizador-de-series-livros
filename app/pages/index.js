@@ -4,15 +4,7 @@ $(function () {
   $(".button-collapse").sideNav();
 });
 
-$(".carousel.carousel-slider").carousel({
-  fullWidth: true,
-  indicators: true,
-  duration: 200,
-});
-
-$(function () {
-  $("#menu").load("menu.html");
-});
+/* Fazer trocar as imagens */
 
 function slide1() {
   document.getElementById(
