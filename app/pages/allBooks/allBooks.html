@@ -77,10 +77,30 @@
       </div>
     </nav>
     <div class="container">
-      <h1>Populares</h1>
+      <h1>Livros</h1>
+      <div>
+        <fieldset>
+          <legend>Choose your monster's features:</legend>
+
+          <div>
+            <input type="checkbox" id="all" name="all" checked />
+            <label for="all">Todos</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="novels" name="novels" />
+            <label for="novels">Novels</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="br" name="br" />
+            <label for="br">Literatura Br</label>
+          </div>
+        </fieldset>
+      </div>
       <hr />
       <div id="card-list">
-        <div class="card">
+        <div class="card" name="novels">
           <a href="http://127.0.0.1:5500/app/pages/book/mushoku.html">
             <div class="title">
               <p>Mushoku Tensei</p>
@@ -113,7 +133,7 @@
             />
           </a>
         </div>
-        <div class="card">
+        <div class="card" name="novels">
           <a href="">
             <div class="title">
               <p>Goblin slayer</p>
@@ -126,8 +146,8 @@
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="/app/pages/populares/populares.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script src="/app/pages/allBooks/allBooks.js"></script>
   </body>
 </html>

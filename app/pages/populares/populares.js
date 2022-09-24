@@ -2,10 +2,6 @@ $(function () {
   $(".button-collapse").sideNav();
 });
 
-$(document).ready(function () {
-  $("select").formSelect();
-});
-
 const allCards = document.getElementsByClassName("card");
 
 for (let i = 0; i < allCards.length; i++) {
