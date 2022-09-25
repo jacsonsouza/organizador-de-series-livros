@@ -22,23 +22,32 @@ var hide = function (card) {
 
 /* Filtros */
 
-let check = document.querySelectorAll("input[type='checkbox']");
-
 let filtro = function () {
+  let check = document.querySelectorAll("input[type='checkbox']");
   for (let selecionado of check) {
-    selecionado.addEventListener("change", () => {
-      if (selecionado.checked) {
-        let test = selecionado.value;
-        let novels = document.getElementsByName(test);
+    if (selecionado.checked) {
+      let all = document.getElementsByClassName("card");
 
-        for (let i of novels) {
-          i.style.display = "none";
-        }
-      } else {
+      for (let a of all) {
+        a.style.display = "none";
+      }
+
+      let novels = document.getElementsByName("novels");
+
+      for (let i of novels) {
         i.style.display = "block";
       }
-    });
+      break;
+    } else {
+      let all1 = document.getElementsByClassName("card");
+
+      for (let b of all1) {
+        b.style.display = "block";
+      }
+    }
   }
 };
 
-filtro();
+document.getElementById("filter").onclick = function () {
+  filtro();
+};

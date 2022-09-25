@@ -45,3 +45,38 @@ let checkAnswer = (answer) => {
 let pontuaçãoTotal = function () {
   return pontuação;
 };
+
+/* setInterval */
+let h = 0;
+let m = 0;
+let s = 0;
+
+function startRead(op) {
+  let selecionado = op.options[op.selectedIndex].innerHTML;
+
+  if (selecionado == "Lendo") {
+    var key = setInterval(function () {
+      document.getElementById(
+        "time-read"
+      ).innerHTML = `Duração da leitura: ${h}:${m}:${s}`;
+
+      s++;
+
+      if (s == 60) {
+        m++;
+        s = 0;
+      }
+
+      if (m == 60) {
+        h++;
+        m = 0;
+      }
+
+      let selecionado = op.options[op.selectedIndex].innerHTML;
+
+      if (selecionado == "Completo" || selecionado == "Pausado") {
+        clearInterval(key);
+      }
+    }, 1000);
+  }
+}

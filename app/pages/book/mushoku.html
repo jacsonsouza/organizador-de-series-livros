@@ -102,7 +102,11 @@
         </div>
         <!--Fim do bloco de cima-->
         <div id="select-read">
-          <select class="form-select" aria-label="Default select example">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onchange="startRead(this)"
+          >
             <option selected>Selecione</option>
             <option value="1" name="completo">Completo</option>
             <option value="2" name="lendo">Lendo</option>
@@ -122,7 +126,7 @@
           <div id="info-rigth">
             <p>Início da leitura:</p>
             <p>Término da leitura:</p>
-            <p>Duração da leitura:</p>
+            <p id="time-read">Duração da leitura:</p>
           </div>
         </div>
         <!--Fim do bloco de baixo-->

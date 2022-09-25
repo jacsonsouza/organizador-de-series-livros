@@ -232,3 +232,21 @@ select {
   justify-content: center;
   margin: 2em;
 }
+
+/* Estilo all books */
+
+fieldset {
+  overflow: hidden;
+}
+
+fieldset div {
+  float: left;
+  margin: 5px;
+}
+
+fieldset button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 1px;
+}
