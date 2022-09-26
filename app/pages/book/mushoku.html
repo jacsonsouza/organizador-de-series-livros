@@ -17,65 +17,7 @@
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
-          <img src="/assets/resources/images/logo.png" alt="Logo" />
-        </a>
-        <a href="#" data-activates="menu-mobile" class="button-collapse">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a
-              href="
-              "
-              >Livros</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              <div id="div-source">
-                <input
-                  type="text"
-                  id="text-source"
-                  placeholder="Pesquisar..."
-                />
-                <img
-                  id="lupa"
-                  src="/assets/resources/images/lupa.png"
-                  alt="Lupa"
-                />
-              </div>
-            </a>
-          </li>
-          <li><a href="#">Entrar</a></li>
-        </ul>
-        <ul class="side-nav" id="menu-mobile">
-          <li>
-            <img src="/assets/resources/images/logo.png" alt="Logo" />
-          </li>
-          <li>
-            <a href="#">
-              <div id="div-source">
-                <input
-                  type="text"
-                  id="text-source"
-                  placeholder="Pesquisar..."
-                />
-                <img
-                  id="lupa"
-                  src="/assets/resources/images/lupa.png"
-                  alt="Lupa"
-                />
-              </div>
-            </a>
-          </li>
-          <li><a href="#">Livros</a></li>
-          <li><a href="#">Entrar</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div id="menu"></div>
     <main>
       <div class="container">
         <div id="bloco-topo">
@@ -124,8 +66,8 @@
             <p>Data de conclusão:</p>
           </div>
           <div id="info-rigth">
-            <p>Início da leitura:</p>
-            <p>Término da leitura:</p>
+            <p id="time-start">Início da leitura:</p>
+            <p id="time-end">Término da leitura:</p>
             <p id="time-read">Duração da leitura:</p>
           </div>
         </div>
@@ -136,35 +78,10 @@
         </div>
       </div>
     </main>
-    <footer class="page-footer black">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">
-              You can use rows and columns here to organize your footer content.
-            </p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="/app/pages/common.js"></script>
     <script src="/app/pages/book/book.js"></script>
   </body>
 </html>

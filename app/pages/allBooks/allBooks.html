@@ -17,135 +17,81 @@
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
-          <img src="/assets/resources/images/logo.png" alt="Logo" />
-        </a>
-        <a href="#" data-activates="menu-mobile" class="button-collapse">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a
-              href="
-              "
-              >Livros</a
-            >
-          </li>
-          <li>
-            <a href="#">
-              <div id="div-source">
-                <input
-                  type="text"
-                  id="text-source"
-                  placeholder="Pesquisar..."
-                />
-                <img
-                  id="lupa"
-                  src="/assets/resources/images/lupa.png"
-                  alt="Lupa"
-                />
-              </div>
-            </a>
-          </li>
-          <li><a href="#">Entrar</a></li>
-        </ul>
-        <ul class="side-nav" id="menu-mobile">
-          <li>
-            <img src="/assets/resources/images/logo.png" alt="Logo" />
-          </li>
-          <li>
-            <a href="#">
-              <div id="div-source">
-                <input
-                  type="text"
-                  id="text-source"
-                  placeholder="Pesquisar..."
-                />
-                <img
-                  id="lupa"
-                  src="/assets/resources/images/lupa.png"
-                  alt="Lupa"
-                />
-              </div>
-            </a>
-          </li>
-          <li><a href="#">Livros</a></li>
-          <li><a href="#">Entrar</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <h1>Livros</h1>
-      <div>
-        <fieldset>
-          <legend>Choose your monster's features:</legend>
+    <div id="menu"></div>
+    <main>
+      <div class="container">
+        <h1>Livros</h1>
+        <div>
+          <fieldset>
+            <legend>Choose your monster's features:</legend>
 
-          <div>
-            <input type="checkbox" id="novels" name="novels" />
-            <label for="novels">novels</label>
-          </div>
+            <div>
+              <input type="checkbox" id="novels" name="novels" />
+              <label for="novels">novels</label>
+            </div>
 
-          <div>
-            <input type="checkbox" id="brasil" name="brasil" />
-            <label for="brasil">brasil</label>
+            <div>
+              <input type="checkbox" id="brasil" name="brasil" />
+              <label for="brasil">brasil</label>
+            </div>
+            <div>
+              <button id="filter">Filtrar</button>
+            </div>
+          </fieldset>
+        </div>
+        <hr />
+        <div id="card-list">
+          <div class="card" name="novels">
+            <a href="http://127.0.0.1:5500/app/pages/book/mushoku.html">
+              <div class="title">
+                <p>Mushoku Tensei</p>
+              </div>
+              <img
+                src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/06/Mushoku-Tensei-Jobless-Reincarnation-vol-24-1.jpg?resize=1000%2C1423&ssl=1"
+                alt=""
+              />
+            </a>
           </div>
-          <div>
-            <button id="filter">Filtrar</button>
+          <div class="card">
+            <a href="">
+              <div class="title">
+                <p>Java: Como programar</p>
+              </div>
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/81jdJ94mSbL.jpg"
+                alt=""
+              />
+            </a>
           </div>
-        </fieldset>
-      </div>
-      <hr />
-      <div id="card-list">
-        <div class="card" name="novels">
-          <a href="http://127.0.0.1:5500/app/pages/book/mushoku.html">
-            <div class="title">
-              <p>Mushoku Tensei</p>
-            </div>
-            <img
-              src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/06/Mushoku-Tensei-Jobless-Reincarnation-vol-24-1.jpg?resize=1000%2C1423&ssl=1"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="card">
-          <a href="">
-            <div class="title">
-              <p>Java: Como programar</p>
-            </div>
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81jdJ94mSbL.jpg"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="card">
-          <a href="">
-            <div class="title">
-              <p>Grande sertão: Veredas</p>
-            </div>
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/91TxMwdCA8L.jpg"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="card" name="novels">
-          <a href="">
-            <div class="title">
-              <p>Goblin slayer</p>
-            </div>
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81aFft3XGNL.jpg"
-              alt=""
-            />
-          </a>
+          <div class="card">
+            <a href="">
+              <div class="title">
+                <p>Grande sertão: Veredas</p>
+              </div>
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/91TxMwdCA8L.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="card" name="novels">
+            <a href="">
+              <div class="title">
+                <p>Goblin slayer</p>
+              </div>
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/81aFft3XGNL.jpg"
+                alt=""
+              />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <div id="footer"></div>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script src="/app/pages/common.js"></script>
     <script src="/app/pages/allBooks/allBooks.js"></script>
   </body>
 </html>

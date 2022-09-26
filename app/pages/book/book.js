@@ -7,7 +7,7 @@ document.getElementById("bt-questions").onclick = function () {
 
   while (confirma && contador != questions.length) {
     var answer = prompt(questions[contador]);
-
+    answer = answer.toLowerCase();
     if (checkAnswer(answer)) {
       contador++;
       pontuação++;
@@ -16,8 +16,6 @@ document.getElementById("bt-questions").onclick = function () {
       contador++;
       alert("Que pena, você errou!");
     }
-
-    confirma = confirm("Quer continuar?");
   }
 
   alert(`Você teve ${pontuaçãoTotal()} acertos.`);
@@ -31,9 +29,9 @@ let answers = [];
   questions[1] = "Para onde o Rudeus e Eris foram mandados no incidente?";
   questions[2] = "Qual o nome da segunda esposa do protagonista?";
 
-  answers[0] = "Rudeus Grayrat";
-  answers[1] = "Continente demoníaco";
-  answers[2] = "Roxy";
+  answers[0] = "rudeus grayrat";
+  answers[1] = "continente demoníaco";
+  answers[2] = "roxy";
 })();
 
 let checkAnswer = (answer) => {
@@ -53,8 +51,11 @@ let s = 0;
 
 function startRead(op) {
   let selecionado = op.options[op.selectedIndex].innerHTML;
+  let date = new Date();
 
   if (selecionado == "Lendo") {
+    document.getElementById("time-start").innerHTML =
+      "Início da leitura: " + date.toLocaleDateString();
     var key = setInterval(function () {
       document.getElementById(
         "time-read"
@@ -76,6 +77,9 @@ function startRead(op) {
 
       if (selecionado == "Completo" || selecionado == "Pausado") {
         clearInterval(key);
+        document.getElementById("time-end").innerHTML =
+          "Término da leitura: " +
+          date.toLocaleDateString().replace("/", ".").replace("/", ".");
       }
     }, 1000);
   }

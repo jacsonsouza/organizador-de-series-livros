@@ -33,7 +33,9 @@ nav ul a {
   margin-top: 0.5em;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   float: left;
   width: 14em;
   margin-top: -2px;

@@ -1,5 +1,3 @@
-/* Function para responsividade do menu*/
-
 $(function () {
   $(".button-collapse").sideNav();
 });
@@ -9,7 +7,7 @@ $(function () {
 function slide1() {
   document.getElementById(
     "div-carousel"
-  ).innerHTML = `<a href=""><img src="/organizador-de-series-livros/assets/resources/images/carousel-slide1.jpg" alt=""/></a>`;
+  ).innerHTML = `<a href=""><img src="/assets/resources/images/carousel-slide1.jpg" alt=""/></a>`;
   setTimeout(function () {
     document.getElementById(
       "div-carousel"
