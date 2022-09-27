@@ -14,7 +14,7 @@ nav {
 
 .brand-logo img {
   height: 64px;
-  margin-left: 0.5em;
+  margin-left: 0float: right;.5em;
 }
 
 nav ul a {
@@ -33,6 +33,13 @@ nav ul a {
   margin-top: 0.5em;
 }
 
+.text-source {
+  float: left;
+  width: 12.6em;
+  margin-top: -2px;
+  margin-left: 10px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -45,6 +52,7 @@ input[type="password"] {
 #lupa {
   float: left;
   margin-top: 6px;
+  width: 28px;
 }
 
 /* Estilo side-nav */
@@ -232,7 +240,8 @@ select {
 .button {
   display: flex;
   justify-content: center;
-  margin: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 /* Estilo all books */
@@ -251,4 +260,56 @@ fieldset button {
   color: white;
   font-weight: bold;
   border-radius: 1px;
+}
+
+/* Estilo login */
+
+#dados {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+#dados-logo {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+}
+
+#dados-logo img {
+  height: 64px;
+}
+
+.div-login {
+  border: solid white;
+  background-color: black;
+  border-radius: 13px;
+  width: 260px;
+  height: 45px;
+  overflow: hidden;
+  margin-top: 0.5em;
+}
+
+#dados a {
+  float: right;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#dados p {
+  float: left;
+  color: white;
+  font-weight: bold;
+}
+
+.bt-login {
+  background-color: white;
+  height: 50px;
+  color: black;
+  font-weight: bold;
+  width: 6em;
+  border-radius: 30px;
+  border-style: solid;
+  margin-top: 2em;
 }

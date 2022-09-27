@@ -1,6 +1,21 @@
-$(function () {
-  $(".button-collapse").sideNav();
-});
+(function () {
+  let cardsString = localStorage.getItem("1");
+  let cards = JSON.parse(cardsString);
+
+  for (let card of cards) {
+    document.querySelector("#card-list").innerHTML += `<div class="card">
+  <a href="${card.page}">
+    <div class="title">
+      <p>${card.title}</p>
+    </div>
+    <img
+      src="${card.img}"
+      alt=""
+    />
+  </a>
+</div>`;
+  }
+})();
 
 const allCards = document.getElementsByClassName("card");
 

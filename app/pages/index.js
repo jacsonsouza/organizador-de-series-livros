@@ -1,6 +1,25 @@
-$(function () {
-  $(".button-collapse").sideNav();
-});
+// $(function () {
+//   $(".button-collapse").sideNav();
+// });
+
+let cardsString = localStorage.getItem("1");
+let cards = JSON.parse(cardsString);
+
+cards = cards.slice(0, 4);
+
+for (let card of cards) {
+  document.querySelector(".list").innerHTML += `<div class="card">
+  <a href="${card.page}">
+    <div class="title">
+      <p>${card.title}</p>
+    </div>
+    <img
+      src="${card.img}"
+      alt=""
+    />
+  </a>
+</div>`;
+}
 
 /* Fazer trocar as imagens */
 

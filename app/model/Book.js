@@ -1,7 +1,5 @@
-var Book = function (title, description, author, dateStart, dateEnd) {
+var Book = function (title, page, img) {
   this.title = title;
-  this.description = description;
-  this.author = author;
-  this.dateStart = dateStart;
-  this.dateEnd = dateEnd;
+  this.page = page;
+  this.img = img;
 };

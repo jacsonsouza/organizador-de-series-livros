@@ -1,6 +1,6 @@
-$(function () {
-  $(".button-collapse").sideNav();
-});
+// $(function () {
+//   $(".sidenav").sidenav();
+// });
 
 $(function () {
   $("#menu").load("/menu.html");
