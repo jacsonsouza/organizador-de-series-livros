@@ -16,66 +16,29 @@
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
   </head>
-  <body onload="slide1()">
+  <body onload="slide()">
     <div id="menu"></div>
     <main>
       <div class="container">
         <div id="div-carousel"></div>
-        <div id="site-width">
-          <div id="sessao-pop">
+        <div class="site-width">
+          <div class="section">
             <h4>Populares</h4>
             <a href="/app/pages/populares/populares.html">mostrar mais</a>
           </div>
-          <hr size="50px" />
-          <div id="card-list">
-            <div class="card">
-              <a
-                href="http://127.0.0.1:5500/organizador-de-series-livros/app/pages/book/mushoku.html"
-              >
-                <img
-                  src="https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/06/Mushoku-Tensei-Jobless-Reincarnation-vol-24-1.jpg?resize=1000%2C1423&ssl=1"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="card">
-              <a href="">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/I/81jdJ94mSbL.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="card">
-              <a href="">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/I/91TxMwdCA8L.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="card">
-              <a href="">
-                <img
-                  src="https://images-na.ssl-images-amazon.com/images/I/81aFft3XGNL.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div id="site-width">
-          <div id="sessao-pop">
+          <hr />
+          <div id="pop-list" class="list"></div>
+          <div class="section">
             <h4>Bem avaliados</h4>
             <a href="">mostrar mais</a>
           </div>
-          <hr size="50px" />
-          <div id="card-list" class="list"></div>
+          <hr />
+          <div id="rated-list" class="list"></div>
         </div>
       </div>
     </main>
     <div id="footer"></div>
-    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="/app/pages/common.js"></script>
     <script src="/app/pages/index.js"></script>

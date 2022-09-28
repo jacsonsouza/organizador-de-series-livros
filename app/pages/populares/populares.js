@@ -1,35 +1,38 @@
+/* Montar a lista de livros pegando os itens do localStorege */
+
 (function () {
   let cardsString = localStorage.getItem("1");
   let cards = JSON.parse(cardsString);
 
   for (let card of cards) {
-    document.querySelector("#card-list").innerHTML += `<div class="card">
-  <a href="${card.page}">
-    <div class="title">
-      <p>${card.title}</p>
-    </div>
-    <img
-      src="${card.img}"
-      alt=""
-    />
-  </a>
-</div>`;
+    document.querySelector(".list").innerHTML += `<div class="card">
+    <a href="${card.page}">
+      <div class="title">
+        <p>${card.title}</p>
+      </div>
+      <img src="${card.img}" alt="${card.title}" />
+    </a>
+  </div>`;
   }
 })();
 
-const allCards = document.getElementsByClassName("card");
+/* Funcões para eventos onmouseover e onmouseout */
 
-for (let i = 0; i < allCards.length; i++) {
-  let card = allCards[i];
+(function () {
+  const allCards = document.getElementsByClassName("card");
 
-  card.onmouseover = function () {
-    show(card);
-  };
+  for (let i = 0; i < allCards.length; i++) {
+    let card = allCards[i];
 
-  card.onmouseout = function () {
-    hide(card);
-  };
-}
+    card.onmouseover = function () {
+      show(card);
+    };
+
+    card.onmouseout = function () {
+      hide(card);
+    };
+  }
+})();
 
 function show(card) {
   card.querySelector(".title").style.display = "block";

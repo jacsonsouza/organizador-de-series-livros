@@ -1,4 +1,4 @@
-import { User } from "/app/model/User.js";
+import { User } from "/app/model/user.js";
 
 document.querySelector("#bt").onclick = function () {
   const email = document.querySelector("#email").value;
@@ -14,7 +14,7 @@ document.querySelector("#bt").onclick = function () {
 
 function cadastra(email, nome, senha) {
   let user = new User(email, nome, senha);
-  localStorage.setItem("1", JSON.stringify(user));
+  localStorage.setItem(nome, JSON.stringify(user));
 }
 
 let inputTag = document.getElementsByTagName("input");

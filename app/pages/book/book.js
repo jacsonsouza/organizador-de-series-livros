@@ -44,6 +44,24 @@ let pontuaçãoTotal = function () {
   return pontuação;
 };
 
+let bookTitle = document.getElementById("book-title").innerHTML;
+
+let cardsString = localStorage.getItem("1");
+let cards = JSON.parse(cardsString);
+
+let bookPage = function () {
+  for (let card of cards) {
+    if (card.title == bookTitle) {
+      return card;
+    }
+  }
+};
+
+let book = bookPage();
+
+let userString = localStorage.getItem("Jacson");
+let user = JSON.parse(userString);
+
 /* setInterval */
 let h = 0;
 let m = 0;
@@ -80,6 +98,8 @@ function startRead(op) {
         document.getElementById("time-end").innerHTML =
           "Término da leitura: " +
           date.toLocaleDateString().replace("/", ".").replace("/", ".");
+        user.books[0] = book;
+        localStorage.setItem("Jacson", JSON.stringify(user));
       }
     }, 1000);
   }

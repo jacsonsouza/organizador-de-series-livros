@@ -1,6 +1,8 @@
-// $(function () {
-//   $(".sidenav").sidenav();
-// });
+(function ($) {
+  $(function () {
+    $(".sidenav").sideNav();
+  });
+})(jQuery);
 
 $(function () {
   $("#menu").load("/menu.html");

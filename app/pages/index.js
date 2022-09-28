@@ -1,29 +1,40 @@
-// $(function () {
-//   $(".button-collapse").sideNav();
-// });
-
 let cardsString = localStorage.getItem("1");
-let cards = JSON.parse(cardsString);
 
-cards = cards.slice(0, 4);
+(function () {
+  let cards = JSON.parse(cardsString);
+  cards = cards.slice(0, 4);
 
-for (let card of cards) {
-  document.querySelector(".list").innerHTML += `<div class="card">
-  <a href="${card.page}">
-    <div class="title">
-      <p>${card.title}</p>
-    </div>
-    <img
-      src="${card.img}"
-      alt=""
-    />
-  </a>
-</div>`;
-}
+  for (let card of cards) {
+    document.querySelector("#pop-list").innerHTML += `<div class="card">
+    <a href="${card.page}">
+      <div class="title">
+        <p>${card.title}</p>
+      </div>
+        <img src="${card.img}" alt="" />
+      </a>
+  </div>`;
+  }
+})();
+
+(function () {
+  let cards = JSON.parse(cardsString);
+  cards = cards.slice(2, 6);
+
+  for (let card of cards) {
+    document.querySelector("#rated-list").innerHTML += `<div class="card">
+    <a href="${card.page}">
+      <div class="title">
+       <p>${card.title}</p>
+      </div>
+      <img src="${card.img}" alt="" />
+    </a>
+  </div>`;
+  }
+})();
 
 /* Fazer trocar as imagens */
 
-function slide1() {
+function slide() {
   document.getElementById(
     "div-carousel"
   ).innerHTML = `<a href=""><img src="/assets/resources/images/carousel-slide1.jpg" alt=""/></a>`;
@@ -35,7 +46,7 @@ function slide1() {
       document.getElementById(
         "div-carousel"
       ).innerHTML = `<img src="https://img.quizur.com/f/img5f8e5b745bd285.10956982.jpg?lastEdited=1603165046" alt=""/>`;
-      setTimeout(slide1(), 10000);
+      setTimeout(slide(), 10000);
     }, 10000);
   }, 10000);
 }

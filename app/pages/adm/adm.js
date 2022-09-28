@@ -11,7 +11,6 @@ document.querySelector("#bt").onclick = function () {
 
   cadastra(title, page, img);
 };
-let pos = localStorage.getItem("2");
 
 let cardsString = localStorage.getItem("1");
 let cards = JSON.parse(cardsString);
@@ -19,7 +18,5 @@ let cards = JSON.parse(cardsString);
 function cadastra(title, page, img) {
   let book = new Book(title, page, img);
   cards.push(book);
-  pos++;
   localStorage.setItem("1", JSON.stringify(cards));
-  localStorage.setItem("2", JSON.stringify(pos));
 }

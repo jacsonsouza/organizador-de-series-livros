@@ -11,7 +11,7 @@
   });
 
   for (let card of cards) {
-    document.querySelector("#card-list").innerHTML += `<div class="card">
+    document.querySelector(".list").innerHTML += `<div class="card">
   <a href="${card.page}">
   <div class="title">
   <p>${card.title}</p>

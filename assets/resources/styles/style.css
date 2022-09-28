@@ -6,15 +6,11 @@ main {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 /* Estilo navbar */
-nav {
-  background-color: black;
-  height: 65px;
-}
 
 .brand-logo img {
   height: 64px;
-  margin-left: 0float: right;.5em;
 }
 
 nav ul a {
@@ -106,16 +102,16 @@ hr {
   border-color: black;
 }
 
-#site-width div {
+.site-width div {
   overflow: hidden;
 }
 
-#sessao-pop h4 {
+.section h4 {
   color: black;
   float: left;
 }
 
-#sessao-pop a {
+.section a {
   color: white;
   float: right;
   margin-top: 3em;
@@ -123,7 +119,7 @@ hr {
 
 /* Estilos cards */
 
-#card-list {
+.list {
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -278,6 +274,10 @@ fieldset button {
 
 #dados-logo img {
   height: 64px;
+}
+
+#dados input {
+  color: white;
 }
 
 .div-login {
