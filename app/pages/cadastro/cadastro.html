@@ -18,31 +18,38 @@
   </head>
   <body>
     <div id="menu"></div>
-    <!--Início do formulário-->
 
+    <!--Início do formulário-->
     <main>
-      <div id="formulario">
-        <form action="">
-          <div id="formulario-logo">
+      <div id="form-fields">
+        <form action="" onsubmit="return validate(this);">
+          <div id="form-logo">
             <img src="/assets/resources/images/logo.png" alt="" />
           </div>
-          <div class="div-source">
-            <input type="email" id="email" placeholder="e-mail" />
+          <div class="fields">
+            <input type="email" id="email" placeholder="E-mail" />
           </div>
-          <div class="div-source">
-            <input type="text" id="nome" placeholder="Nome" />
+          <div class="fields">
+            <input
+              type="text"
+              id="usuario"
+              placeholder="Usuário"
+              required
+              name="usuario"
+            />
           </div>
-          <div class="div-source">
+          <div class="fields">
+            <input type="password" id="password" placeholder="Senha" />
+          </div>
+          <div class="fields">
             <input
               type="password"
-              id="senha"
-              placeholder="Senha - mais de 3 caracteres"
+              id="confirmation"
+              placeholder="Confirme a senha"
             />
           </div>
           <div class="button">
-            <button type="submit" class="bt-questions" id="bt">
-              Cadastrar
-            </button>
+            <button type="submit" class="form-button" id="bt">Cadastrar</button>
           </div>
         </form>
       </div>
@@ -50,7 +57,6 @@
     <!--Fim do formulário-->
 
     <div id="footer"></div>
-
     <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="/app/pages/common.js"></script>

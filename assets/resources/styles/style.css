@@ -236,7 +236,7 @@ select {
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 1.5em;
+  margin-top: 2.5em;
   margin-bottom: 1.5em;
 }
 
@@ -258,52 +258,55 @@ fieldset button {
   border-radius: 1px;
 }
 
-/* Estilo login */
+/* Estilo login/cadastro */
 
-#dados {
+.fields {
+  border: solid white;
+  background-color: black;
+  border-radius: 13px;
+  width: 20em;
+  height: 3em;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+#form-fields {
   display: flex;
   justify-content: center;
   margin-top: 5em;
 }
 
-#dados-logo {
+#form-logo {
   display: flex;
   justify-content: center;
   margin: 2em;
 }
 
-#dados-logo img {
+#form-logo img {
   height: 64px;
 }
 
-#dados input {
+#form-fields input {
   color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
-.div-login {
-  border: solid white;
-  background-color: black;
-  border-radius: 13px;
-  width: 260px;
-  height: 45px;
-  overflow: hidden;
-  margin-top: 0.5em;
-}
-
-#dados a {
-  float: right;
+#form-fields a {
+  float: left;
   color: white;
   font-weight: bold;
   text-decoration: underline;
 }
 
-#dados p {
+#form-fields p {
   float: left;
   color: white;
   font-weight: bold;
+  margin-right: 10px;
 }
 
-.bt-login {
+.form-button {
   background-color: white;
   height: 50px;
   color: black;
@@ -311,5 +314,5 @@ fieldset button {
   width: 6em;
   border-radius: 30px;
   border-style: solid;
-  margin-top: 2em;
+  margin-top: 1.5em;
 }

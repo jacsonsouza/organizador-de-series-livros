@@ -1,5 +1,17 @@
 import { User } from "/app/model/user.js";
 
+// function validate(form) {
+//   if (form.email.indexOf("@") == -1) {
+//     alert("E-mail inválido");
+//     return false;
+//   }
+
+//   if (form.password.length < 3) {
+//     alert("Senha inválida");
+//     return false;
+//   }
+// }
+
 document.querySelector("#bt").onclick = function () {
   const email = document.querySelector("#email").value;
   const nome = document.querySelector("#nome").value;
@@ -27,7 +39,6 @@ for (let i of inputTag) {
   };
 
   i.onblur = function () {
-    i.style.color = "black";
     i.style.scale = "1";
   };
 }
