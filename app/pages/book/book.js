@@ -1,28 +1,45 @@
+"use strict";
+
 /* Teste seus conhecimentos*/
+
+let questions = [];
+let answers = [];
+
 let contador = 0;
 let pontuação = 0;
 
-document.getElementById("bt-questions").onclick = function () {
-  let confirma = confirm("Está preparado para testar seus conhecimentos?");
+let checkAnswer = (answer) => {
+  if (answer === answers[contador]) return true;
 
-  while (confirma && contador != questions.length) {
-    var answer = prompt(questions[contador]);
+  return false;
+};
+
+let pontuaçãoTotal = function () {
+  return pontuação;
+};
+
+document.getElementById("bt-questions").onclick = function () {
+  contador = 0;
+  pontuação = 0;
+  let confirma = window.confirm(
+    "Está preparado para testar seus conhecimentos?"
+  );
+
+  while (confirma && contador !== questions.length) {
+    var answer = window.prompt(questions[contador]);
     answer = answer.toLowerCase();
     if (checkAnswer(answer)) {
       contador++;
       pontuação++;
-      alert("Muito bem, você acertou!");
+      window.alert("Muito bem, você acertou!");
     } else {
       contador++;
-      alert("Que pena, você errou!");
+      window.alert("Que pena, você errou!");
     }
   }
 
-  alert(`Você teve ${pontuaçãoTotal()} acertos.`);
+  window.alert(`Você teve ${pontuaçãoTotal()} acertos.`);
 };
-
-let questions = [];
-let answers = [];
 
 (function () {
   questions[0] = "Qual o nome do protagonista?";
@@ -34,35 +51,7 @@ let answers = [];
   answers[2] = "roxy";
 })();
 
-let checkAnswer = (answer) => {
-  if (answer == answers[contador]) return true;
-
-  return false;
-};
-
-let pontuaçãoTotal = function () {
-  return pontuação;
-};
-
-let bookTitle = document.getElementById("book-title").innerHTML;
-
-let cardsString = localStorage.getItem("1");
-let cards = JSON.parse(cardsString);
-
-let bookPage = function () {
-  for (let card of cards) {
-    if (card.title == bookTitle) {
-      return card;
-    }
-  }
-};
-
-let book = bookPage();
-
-let userString = localStorage.getItem("Jacson");
-let user = JSON.parse(userString);
-
-/* setInterval */
+/* setInterval para marcar o tempo de leitura */
 let h = 0;
 let m = 0;
 let s = 0;
@@ -71,9 +60,10 @@ function startRead(op) {
   let selecionado = op.options[op.selectedIndex].innerHTML;
   let date = new Date();
 
-  if (selecionado == "Lendo") {
+  if (selecionado === "Lendo") {
     document.getElementById("time-start").innerHTML =
-      "Início da leitura: " + date.toLocaleDateString();
+      "Início da leitura: " +
+      date.toLocaleDateString().replace("/", ".").replace("/", ".");
     var key = setInterval(function () {
       document.getElementById(
         "time-read"
@@ -81,25 +71,23 @@ function startRead(op) {
 
       s++;
 
-      if (s == 60) {
+      if (s === 60) {
         m++;
         s = 0;
       }
 
-      if (m == 60) {
+      if (m === 60) {
         h++;
         m = 0;
       }
 
       let selecionado = op.options[op.selectedIndex].innerHTML;
 
-      if (selecionado == "Completo" || selecionado == "Pausado") {
+      if (selecionado === "Completo" || selecionado === "Pausado") {
         clearInterval(key);
         document.getElementById("time-end").innerHTML =
           "Término da leitura: " +
           date.toLocaleDateString().replace("/", ".").replace("/", ".");
-        user.books[0] = book;
-        localStorage.setItem("Jacson", JSON.stringify(user));
       }
     }, 1000);
   }

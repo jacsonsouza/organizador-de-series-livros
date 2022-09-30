@@ -1,7 +1,13 @@
-(function () {
-  let cardsString = localStorage.getItem("1");
-  let cards = JSON.parse(cardsString);
+"use strict";
 
+/*
+ * Mostrar os livros na tela usando String Template
+ */
+
+let cardsString = localStorage.getItem("1");
+let cards = JSON.parse(cardsString);
+
+(function () {
   cards = cards.sort(function (a, b) {
     if (a.title > b.title) return 1;
 
@@ -11,64 +17,67 @@
   });
 
   for (let card of cards) {
-    document.querySelector(".list").innerHTML += `<div class="card">
-  <a href="${card.page}">
-  <div class="title">
-  <p>${card.title}</p>
-  </div>
-  <img
-  src="${card.img}"
-  alt=""
-  />
-  </a>
+    document.querySelector(
+      ".list"
+    ).innerHTML += `<div class="card" name="${card.classification}">
+    <a href="${card.page}">
+      <div class="title">
+        <p>${card.title}</p>
+      </div>
+      <img src="${card.img}" alt="" />
+    </a>
   </div>`;
   }
 })();
 
-const allCards = document.getElementsByClassName("card");
-
-for (let i = 0; i < allCards.length; i++) {
-  let card = allCards[i];
-
-  card.onmouseover = function () {
-    show(card);
-  };
-
-  card.onmouseout = function () {
-    hide(card);
-  };
-}
+/*
+ * Uso de onmouseover e onmouseout para mostrar ou esconder o nome dos livros
+ */
 
 function show(card) {
   card.querySelector(".title").style.display = "block";
 }
 
-var hide = function (card) {
+let hide = function (card) {
   card.querySelector(".title").style.display = "none";
 };
 
-/* Filtros */
+(function () {
+  const allCards = document.getElementsByClassName("card");
+
+  for (let card of allCards) {
+    card.onmouseover = function () {
+      show(card);
+    };
+
+    card.onmouseout = function () {
+      hide(card);
+    };
+  }
+})();
+
+/*
+ * Filtrar os livros usando getElementsByName
+ */
 
 let filtro = function () {
-  let check = document.querySelectorAll("input[type='checkbox']");
-  for (let selecionado of check) {
-    if (selecionado.checked) {
-      let all = document.getElementsByClassName("card");
+  let checks = document.querySelectorAll("input[type='checkbox']");
+  let allBooks = document.getElementsByClassName("card");
 
-      for (let a of all) {
+  for (let check of checks) {
+    if (check.checked) {
+      for (let a of allBooks) {
         a.style.display = "none";
       }
 
-      let novels = document.getElementsByName("novels");
+      let novels = document.getElementsByName(check.name);
 
       for (let i of novels) {
         i.style.display = "block";
       }
       break;
     } else {
-      let all1 = document.getElementsByClassName("card");
-
-      for (let b of all1) {
+      for (let b of allBooks) {
         b.style.display = "block";
       }
     }

@@ -19,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "jquery": "^3.6.1",
+    "jshint": "^2.13.5",
     "materialize-css": "^1.0.0-rc.2"
   }
 }

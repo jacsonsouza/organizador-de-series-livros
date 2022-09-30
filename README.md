@@ -6,7 +6,7 @@
 
 # GitHub Pages
 
-//<https://jacsonsouza.github.io/organizador-de-series-livros/>
+<https://jacsonsouza.github.io/organizador-de-series-livros/>
 
 # Checkist
 
@@ -23,7 +23,7 @@ Temporizadores
 
 Funções
 
-- [ ] Função anônima com argumento
+- [x] Função anônima com argumento
 - [x] Função anônima sem argumento
 - [x] Função anônima com retorno
 - [x] Função auto-executável

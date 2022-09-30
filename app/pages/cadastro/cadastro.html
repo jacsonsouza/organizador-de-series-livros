@@ -22,7 +22,7 @@
     <!--Início do formulário-->
     <main>
       <div id="form-fields">
-        <form action="" onsubmit="return validate(this);">
+        <form action="">
           <div id="form-logo">
             <img src="/assets/resources/images/logo.png" alt="" />
           </div>
@@ -32,14 +32,18 @@
           <div class="fields">
             <input
               type="text"
-              id="usuario"
+              id="user"
               placeholder="Usuário"
               required
               name="usuario"
             />
           </div>
           <div class="fields">
-            <input type="password" id="password" placeholder="Senha" />
+            <input
+              type="password"
+              id="password"
+              placeholder="Senha (7 Caracteres)"
+            />
           </div>
           <div class="fields">
             <input

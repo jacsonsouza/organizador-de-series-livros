@@ -1,3 +1,5 @@
+"use strict";
+
 /* Montar a lista de livros pegando os itens do localStorege */
 
 (function () {
@@ -18,6 +20,14 @@
 
 /* Funcões para eventos onmouseover e onmouseout */
 
+function show(card) {
+  card.querySelector(".title").style.display = "block";
+}
+
+var hide = function (card) {
+  card.querySelector(".title").style.display = "none";
+};
+
 (function () {
   const allCards = document.getElementsByClassName("card");
 
@@ -33,11 +43,3 @@
     };
   }
 })();
-
-function show(card) {
-  card.querySelector(".title").style.display = "block";
-}
-
-var hide = function (card) {
-  card.querySelector(".title").style.display = "none";
-};
