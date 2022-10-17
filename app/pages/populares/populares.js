@@ -3,11 +3,12 @@
 /* Montar a lista de livros pegando os itens do localStorege */
 
 (function () {
+  let cardString = "";
   let cardsString = localStorage.getItem("1");
   let cards = JSON.parse(cardsString);
 
   for (let card of cards) {
-    document.querySelector(".list").innerHTML += `<div class="card">
+    cardString += `<div class="card">
     <a href="${card.page}">
       <div class="title">
         <p>${card.title}</p>
@@ -16,6 +17,8 @@
     </a>
   </div>`;
   }
+
+  document.querySelector(".list").innerHTML = cardString;
 })();
 
 /* Funcões para eventos onmouseover e onmouseout */
