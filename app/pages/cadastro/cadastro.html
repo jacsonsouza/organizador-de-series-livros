@@ -22,33 +22,31 @@
     <!--Início do formulário-->
     <main>
       <div id="form-fields">
-        <form action="">
+        <form action="" method="get" id="frm">
           <div id="form-logo">
             <img src="/assets/resources/images/logo.png" alt="" />
           </div>
           <div class="fields">
-            <input type="email" id="email" placeholder="E-mail" />
+            <input type="email" id="email" required placeholder="E-mail" />
           </div>
           <div class="fields">
-            <input
-              type="text"
-              id="user"
-              placeholder="Usuário"
-              required
-              name="usuario"
-            />
+            <input type="text" id="user" required placeholder="Usuário" />
           </div>
           <div class="fields">
             <input
               type="password"
               id="password"
-              placeholder="Senha (7 Caracteres)"
+              name="password"
+              minlength="7"
+              pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{6,15}$"
+              placeholder="Senha"
             />
           </div>
           <div class="fields">
             <input
               type="password"
               id="confirmation"
+              name="confirmation"
               placeholder="Confirme a senha"
             />
           </div>
