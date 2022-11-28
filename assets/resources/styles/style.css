@@ -316,3 +316,27 @@ fieldset button {
   border-style: solid;
   margin-top: 1.5em;
 }
+
+/* Estilo para página do perfil */
+
+.profile-div {
+  height: 250px;
+}
+
+#image-profile {
+  border-radius: 100%;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  background: black;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#image-profile img {
+  height: 100%;
+}
+
+#profile-name {
+  text-align: center;
+}

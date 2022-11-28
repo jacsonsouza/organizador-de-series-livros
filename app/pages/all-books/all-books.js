@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 /*
  * Mostrar os livros na tela usando String Template
  */
 
-let cardsString = localStorage.getItem("1");
+let cardsString = localStorage.getItem('1');
 let cards = JSON.parse(cardsString);
 
 (function () {
@@ -18,13 +18,13 @@ let cards = JSON.parse(cardsString);
 
   for (let card of cards) {
     document.querySelector(
-      ".list"
-    ).innerHTML += `<div class="card" name="${card.classification}">
-    <a href="${card.page}">
-      <div class="title">
+      '.list'
+    ).innerHTML += `<div class='card' name='${card.classification}'>
+    <a href='${card.page}'>
+      <div class='title'>
         <p>${card.title}</p>
       </div>
-      <img src="${card.img}" alt="" />
+      <img src='${card.img}' alt='' />
     </a>
   </div>`;
   }
@@ -35,15 +35,15 @@ let cards = JSON.parse(cardsString);
  */
 
 function show(card) {
-  card.querySelector(".title").style.display = "block";
+  card.querySelector('.title').style.display = 'block';
 }
 
 let hide = function (card) {
-  card.querySelector(".title").style.display = "none";
+  card.querySelector('.title').style.display = 'none';
 };
 
 (function () {
-  const allCards = document.getElementsByClassName("card");
+  const allCards = document.getElementsByClassName('card');
 
   for (let card of allCards) {
     card.onmouseover = function () {
@@ -62,28 +62,28 @@ let hide = function (card) {
 
 let filtro = function () {
   let checks = document.querySelectorAll("input[type='checkbox']");
-  let allBooks = document.getElementsByClassName("card");
+  let allBooks = document.getElementsByClassName('card');
 
   for (let check of checks) {
     if (check.checked) {
       for (let a of allBooks) {
-        a.style.display = "none";
+        a.style.display = 'none';
       }
 
       let novels = document.getElementsByName(check.name);
 
       for (let i of novels) {
-        i.style.display = "block";
+        i.style.display = 'block';
       }
       break;
     } else {
       for (let b of allBooks) {
-        b.style.display = "block";
+        b.style.display = 'block';
       }
     }
   }
 };
 
-document.getElementById("filter").onclick = function () {
+document.getElementById('filter').onclick = function () {
   filtro();
 };
