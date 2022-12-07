@@ -12,9 +12,10 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
+    <link rel="stylesheet" href="/assets/resources/images/logo.png" />
   </head>
   <body>
     <div id="menu"></div>
@@ -22,15 +23,27 @@
     <!--Início do formulário-->
     <main>
       <div id="form-fields">
-        <form action="" method="get" id="frm">
+        <form action="/book-list/add" method="POST" id="frm">
           <div id="form-logo">
             <img src="/assets/resources/images/logo.png" alt="" />
           </div>
           <div class="fields">
-            <input type="email" id="email" required placeholder="E-mail" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="E-mail"
+            />
           </div>
           <div class="fields">
-            <input type="text" id="user" required placeholder="Usuário" />
+            <input
+              type="text"
+              id="user"
+              name="name"
+              required
+              placeholder="Usuário"
+            />
           </div>
           <div class="fields">
             <input
@@ -60,8 +73,8 @@
 
     <div id="footer"></div>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="/app/pages/common.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script type="module" src="/app/pages/common.js"></script>
     <script type="module" src="/app/pages/cadastro/cadastro.js"></script>
   </body>
 </html>
