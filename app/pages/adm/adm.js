@@ -1,21 +1,24 @@
 'use strict';
 
-import { Book } from '/app/model/book.js';
+(function () {
+  let cardsString = localStorage.getItem('1');
+  let cards = JSON.parse(cardsString);
+  let bookNumebers = localStorage.getItem('Número de livros');
 
-let cardsString = localStorage.getItem('1');
-let cards = JSON.parse(cardsString);
+  function cadastra(title, page, img) {
+    let book = { title, page, img };
+    cards.push(book);
+    localStorage.setItem('1', JSON.stringify(cards));
+    bookNumebers++;
+    localStorage.setItem('Número de cadastros', bookNumebers);
+  }
 
-function cadastra(title, page, img) {
-  let book = { title, page, img };
-  cards.push(book);
-  localStorage.setItem('1', JSON.stringify(cards));
-}
+  document.querySelector('#bt').onclick = function () {
+    const page = document.querySelector('#page').value;
+    const title = document.querySelector('#title').value;
+    const img = document.querySelector('#image-card').value;
+    const classification = document.querySelector('#classification').value;
 
-document.querySelector('#bt').onclick = function () {
-  const page = document.querySelector('#page').value;
-  const title = document.querySelector('#title').value;
-  const img = document.querySelector('#image-card').value;
-  const classification = document.querySelector('#classification').value;
-
-  cadastra(title, page, img, classification);
-};
+    cadastra(title, page, img, classification);
+  };
+})();

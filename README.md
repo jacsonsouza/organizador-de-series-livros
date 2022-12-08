@@ -28,7 +28,7 @@ Funções
 - [x] Função anônima com retorno
 - [x] Função auto-executável
 - [x] Função com nome
-- [ ] Função aninhada/local - declarar uma função dentro de outra
+- [x] Função aninhada/local - declarar uma função dentro de outra
 - [ ] Passagem de uma função como parâmetro
 - [x] Função Flecha - Arrow Function
 
@@ -105,7 +105,7 @@ jQuery
 Web Storage
 
 - [x] LocalStorage ou SessionStorage
-- [ ] Leitura e escrita de dados simples
+- [x] Leitura e escrita de dados simples
 - [x] Leitura e escrita de JSON
 
 Ajax com Backend

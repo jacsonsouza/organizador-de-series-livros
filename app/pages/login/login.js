@@ -1,24 +1,24 @@
 'use strict';
-
-const btSubmit = document.getElementById('bt');
+/*
+const btSubmit = document.getElementById('login-form');
 
 btSubmit.addEventListener('submit', function () {
-  const name = document.getElementById('name').value;
-  const password = document.getElementById('password').value;
+  $.get('/book-list/login', function (data) {
 
-  $.ajax({
-    url: '/book-list/login',
-    type: 'post',
-    data: {
-      name: name,
-      password: password,
-    },
-    dataType: 'json',
-    success: function () {
-      window.location = '/book-list';
-    },
-    fail: function () {
-      console.log('Algo deu errado');
-    },
   });
 });
+*/
+
+let inputTag = document.getElementsByTagName('input');
+
+for (let inputField of inputTag) {
+  inputField.onfocus = function () {
+    inputField.style.color = 'white';
+    inputField.style.transition = '2s';
+    inputField.style.scale = '1.05';
+  };
+
+  inputField.onblur = function () {
+    inputField.style.scale = '1';
+  };
+}

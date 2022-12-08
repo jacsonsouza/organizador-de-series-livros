@@ -12,9 +12,10 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
+    <link rel="icon" href="/assets/resources/images/logo.png" />
   </head>
   <body>
     <div id="menu"></div>
@@ -36,7 +37,11 @@
             <input type="text" id="image-card" placeholder="Link da imagem" />
           </div>
           <div class="div-source">
-            <input type="text" id="classification" placeholder="Classificação do livro" />
+            <input
+              type="text"
+              id="classification"
+              placeholder="Classificação do livro"
+            />
           </div>
           <div class="button">
             <button type="submit" class="bt-questions" id="bt">
@@ -51,8 +56,8 @@
     <div id="footer"></div>
 
     <script src="/node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="/app/pages/common.js"></script>
-    <script type="module" src="/app/pages/adm/adm.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
+    <script type="module" src="/app/pages/common.js"></script>
+    <script src="/app/pages/adm/adm.js"></script>
   </body>
 </html>

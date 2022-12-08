@@ -11,25 +11,29 @@ module.exports = class Controller {
     };
     console.log(req.body.email);
     User.create(user)
-      .then(res.redirect('/book-list'))
+      .then(() => {
+        res.cookie('logged', 'true');
+        res.cookie('user', user.name);
+        res.redirect('/book-list');
+      })
       .catch((err) => console.log(err));
   }
 
   static userLogin(req, res) {
-    const { name, password } = req.body;
-    console.log('1°: ' + name);
-    if (!name) {
-      return res.status(422).json({ msg: 'O email é obrigatório!' + password });
+    const { email, password } = req.body;
+
+    if (!email) {
+      return res.status(422).json({ msg: 'O email é obrigatório!' });
     }
 
     if (!password) {
       return res.status(422).json({ msg: 'A senha é obrigatório!' });
     }
 
-    User.findOne({ where: { name: name } })
+    User.findOne({ where: { email: email } })
       .then((data) => {
         if (!data) {
-          return res.status(422).json({ msg: 'Usuário não encontrado' });
+          return res.status(422).json({ msg: 'Usuário não encontrado!' });
         }
 
         if (password !== data.password) {
@@ -48,7 +52,7 @@ module.exports = class Controller {
 
     User.findOne({ where: { id: id } })
       .then((data) => {
-        return res.send(data);
+        return res.json(data);
       })
       .catch((err) => console.log('Deu errado' + err));
   }

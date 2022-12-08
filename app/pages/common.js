@@ -22,18 +22,22 @@ if (logged === 'true') {
   menu = '/menu.html';
 }
 
+function deleteCookies() {
+  Cookie.remove('user');
+  Cookie.remove('logged');
+  window.location = '/book-list';
+  console.log('teste');
+}
+
 /**
  * Carrega o menu e o footer usando jquery
  */
 $('#menu').load(menu, function () {
-  $('#img-profile').attr('src', userPic);
-
-  $('#bt-exit').on('click', function () {
-    Cookie.remove('user');
-    Cookie.remove('logged');
-    window.location = '/book-list';
-    console.log('teste');
-  });
+  if (!userPic) {
+    $('#img-profile').attr('src', '/assets/resources/images/profile.png');
+  } else {
+    $('#img-profile').attr('src', userPic);
+  }
 });
 $('#footer').load('/footer.html');
 
@@ -46,5 +50,13 @@ setTimeout(function () {
     alignment: 'left',
     hover: false,
     coverTrigger: false,
+  });
+
+  $('#bt-exit').on('click', function () {
+    deleteCookies();
+  });
+
+  $('#bt-exit-sidenav').on('click', function () {
+    deleteCookies();
   });
 }, 1000);

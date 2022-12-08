@@ -61,27 +61,32 @@ let hide = function (card) {
  */
 
 let filtro = function () {
-  let checks = document.querySelectorAll("input[type='checkbox']");
-  let allBooks = document.getElementsByClassName('card');
+  let options = document.querySelectorAll('.check-input');
+  let selectedString = '';
 
-  for (let check of checks) {
-    if (check.checked) {
-      for (let a of allBooks) {
-        a.style.display = 'none';
-      }
+  for (let option of options) {
+    if (option.checked) {
+      for (let card of cards) {
+        if (option.value === 'all') {
+          selectedString = cardString;
+          break;
+        }
 
-      let novels = document.getElementsByName(check.name);
-
-      for (let i of novels) {
-        i.style.display = 'block';
-      }
-      break;
-    } else {
-      for (let b of allBooks) {
-        b.style.display = 'block';
+        if (card.classification === option.value) {
+          selectedString += `<div class='card'>
+            <a href='${card.page}'>
+              <div class='title'>
+                <p>${card.title}</p>
+              </div>
+              <img src='${card.img}' alt='${card.title}' />
+             </a>
+          </div>`;
+        }
       }
     }
   }
+
+  document.querySelector('.list').innerHTML = selectedString;
 };
 
 document.getElementById('filter').onclick = function () {

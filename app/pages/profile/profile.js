@@ -9,7 +9,12 @@ let userPic = localStorage.getItem(`${userName}Pic`);
  * Carrega a imagem e o nome do perfil do usuário logado
  */
 document.querySelector('#profile-name').innerHTML = `<h2>${userName}</h2>`;
-$('.profile-pic').attr('src', userPic);
+
+if (!userPic) {
+  $('.profile-pic').attr('src', '/assets/resources/images/profile.png');
+} else {
+  $('.profile-pic').attr('src', userPic);
+}
 
 /**
  * Jquery para mudar a imagem de perfil
@@ -82,15 +87,19 @@ let bookString = localStorage.getItem(`${userName}Books`);
 let userBooks = JSON.parse(bookString);
 let cardString = '';
 
-for (let card of userBooks) {
-  cardString += `<div class='card'>
-  <a href='${card.page}'>
-    <div class='title'>
-      <p>${card.title}</p>
-    </div>
-    <img src='${card.img}' alt='${card.title}' />
-  </a>
-</div>`;
-}
+if (!userBooks) {
+  document.querySelector('.list').innerHTML = 'Nenhum livro na lista!';
+} else {
+  for (let card of userBooks) {
+    cardString += `<div class='card'>
+    <a href='${card.page}'>
+      <div class='title'>
+        <p>${card.title}</p>
+      </div>
+      <img src='${card.img}' alt='${card.title}' />
+    </a>
+  </div>`;
+  }
 
-document.querySelector('.list').innerHTML = cardString;
+  document.querySelector('.list').innerHTML = cardString;
+}

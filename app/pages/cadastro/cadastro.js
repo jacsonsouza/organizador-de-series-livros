@@ -1,27 +1,16 @@
 'use strict';
 
-import { User } from '/app/model/user.js';
-
+/**
+ * Declarações
+ */
 let email = '';
 let userName = '';
 let passWord = '';
 let passConfirm = '';
 
-/** Função para cadastra o usuário
- *
- * @param {*} email
- * @param {*} nome
- * @param {*} senha
- */
-
-function cadastra(email, nome, senha) {
-  let user = new User(email, nome, senha);
-  localStorage.setItem(nome, JSON.stringify(user));
-}
-
-/** Funcão para validar as senhas
- * 
- * @returns
+/** 
+ * Funcão para validar as senhas
+ * @returns true/false
 
  */
 
@@ -38,16 +27,21 @@ let validate = function () {
 };
 
 /**
- *
- * @returns
+ * Evento onsubmit que validará os dados recebidos
+ * @returns true/false
  */
 
 document.forms[0].onsubmit = function () {
+  email = document.forms[0].email.value;
+  userName = document.forms[0].user.value;
+  passWord = document.forms[0].password.value;
+  passConfirm = document.forms[0].confirmation.value;
+
   return validate();
 };
 
-/** Eventos para mudança dos balões de erro
- *
+/**
+ * Evento para mudança dos balões de erro
  */
 
 let inputEmail = document.querySelector('#email');
@@ -60,6 +54,9 @@ inputEmail.addEventListener('invalid', function () {
   }
 });
 
+/**
+ * Evento para mudança dos balões de erro
+ */
 let inputPass = document.querySelector('#password');
 
 inputPass.addEventListener('invalid', function () {
@@ -77,22 +74,7 @@ inputPass.addEventListener('invalid', function () {
 });
 
 /**
- *
- */
-
-document.querySelector('#bt').onclick = function () {
-  email = document.forms[0].email.value;
-  userName = document.forms[0].user.value;
-  passWord = document.forms[0].password.value;
-  passConfirm = document.forms[0].confirmation.value;
-
-  if (validate()) {
-    cadastra(email, userName, passWord);
-  }
-};
-
-/**
- *
+ * Eventos no input (onfocus e onblur)
  */
 
 let inputTag = document.getElementsByTagName('input');
