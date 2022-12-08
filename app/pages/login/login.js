@@ -1,13 +1,24 @@
 'use strict';
 
-let validate = function (formValidate) {
-  if (formValidate.text.indexOf('@') === -1) {
-    window.alert('E-mail inválido');
-    return false;
-  }
-};
+const btSubmit = document.getElementById('bt');
 
-document.getElementById('bt').onclick = function () {
-  let test = document.getElementsByTagName('form');
-  validate(test);
-};
+btSubmit.addEventListener('submit', function () {
+  const name = document.getElementById('name').value;
+  const password = document.getElementById('password').value;
+
+  $.ajax({
+    url: '/book-list/login',
+    type: 'post',
+    data: {
+      name: name,
+      password: password,
+    },
+    dataType: 'json',
+    success: function () {
+      window.location = '/book-list';
+    },
+    fail: function () {
+      console.log('Algo deu errado');
+    },
+  });
+});

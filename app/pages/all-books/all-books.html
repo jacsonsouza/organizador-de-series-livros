@@ -12,9 +12,10 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
+    <link rel="icon" href="/assets/resources/images/logo.png" />
   </head>
   <body>
     <div id="menu"></div>
@@ -41,11 +42,12 @@
         </div>
         <hr />
         <div class="list"></div>
+      </div>
     </main>
     <div id="footer"></div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
     <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
-    <script src="/app/pages/common.js"></script>
-    <script src="/app/pages/all-books/all-books.js"></script>
+    <script type="module" src="/app/pages/common.js"></script>
+    <script type="module" src="/app/pages/all-books/all-books.js"></script>
   </body>
 </html>

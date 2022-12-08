@@ -8,6 +8,8 @@ import Cookie from '../../node_modules/js-cookie/dist/js.cookie.mjs';
 /**
  * Declarações
  */
+let userName = Cookie.get('user');
+let userPic = localStorage.getItem(`${userName}Pic`);
 let logged = Cookie.get('logged');
 let menu = '';
 
@@ -23,7 +25,16 @@ if (logged === 'true') {
 /**
  * Carrega o menu e o footer usando jquery
  */
-$('#menu').load(menu);
+$('#menu').load(menu, function () {
+  $('#img-profile').attr('src', userPic);
+
+  $('#bt-exit').on('click', function () {
+    Cookie.remove('user');
+    Cookie.remove('logged');
+    window.location = '/book-list';
+    console.log('teste');
+  });
+});
 $('#footer').load('/footer.html');
 
 /**
@@ -31,4 +42,9 @@ $('#footer').load('/footer.html');
  */
 setTimeout(function () {
   $('.sidenav').sidenav();
+  $('.dropdown-trigger').dropdown({
+    alignment: 'left',
+    hover: false,
+    coverTrigger: false,
+  });
 }, 1000);

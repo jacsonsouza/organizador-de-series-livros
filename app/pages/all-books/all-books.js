@@ -3,7 +3,7 @@
 /*
  * Mostrar os livros na tela usando String Template
  */
-
+let cardString = '';
 let cardsString = localStorage.getItem('1');
 let cards = JSON.parse(cardsString);
 
@@ -17,17 +17,17 @@ let cards = JSON.parse(cardsString);
   });
 
   for (let card of cards) {
-    document.querySelector(
-      '.list'
-    ).innerHTML += `<div class='card' name='${card.classification}'>
+    cardString += `<div class='card'>
     <a href='${card.page}'>
       <div class='title'>
         <p>${card.title}</p>
       </div>
-      <img src='${card.img}' alt='' />
+      <img src='${card.img}' alt='${card.title}' />
     </a>
   </div>`;
   }
+
+  document.querySelector('.list').innerHTML = cardString;
 })();
 
 /*

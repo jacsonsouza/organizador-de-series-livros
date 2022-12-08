@@ -4,24 +4,45 @@
     <div class="nav-wrapper black">
       <div class="container">
         <a class="brand-logo" href="/index.html">
-          <img src="/assets/resources/images/logo.png" />
+          <img src="/assets/resources/images/logo-nav.png" />
         </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
         >
         <ul class="right hide-on-med-and-down">
           <li>
-            <a href="/app/pages/populares/populares.html" class="flow-text"
-              >Populares</a
+            <a href="/app/pages/all-books/all-books.html" class="flow-text"
+              >Livros</a
             >
           </li>
           <li>
             <a href="#" class="flow-text">Pesquisar</a>
           </li>
           <li>
-            <a href="/app/pages/profile/profile.html" class="flow-text"
-              >Logado</a
-            >
+            <div class="dropdown-trigger" data-target="dropdown-menu">
+              <div
+                class="img-profile-div"
+                class="dropdown-trigger"
+                data-target="dropdown-menu"
+              >
+                <a href="#">
+                  <img
+                    src="/assets/resources/images/profile.png"
+                    alt="profile image"
+                    id="img-profile"
+                  />
+                </a>
+              </div>
+              <i class="material-icons">arrow_drop_down</i>
+            </div>
+          </li>
+        </ul>
+        <ul id="dropdown-menu" class="dropdown-content black">
+          <li>
+            <a href="/app/pages/profile/profile.html">Perfil</a>
+          </li>
+          <li>
+            <button id="bt-exit">Sair</button>
           </li>
         </ul>
       </div>
@@ -34,16 +55,23 @@
       <div class="center">
         <img
           class="circle responsive-img"
-          src="/assets/resources/images/logo.png"
+          src="/assets/resources/images/logo-sidenav.png"
         />
       </div>
     </div>
   </div>
-  <li><a href="/app/pages/saque/saque.html" class="flow-text">Pesquisar</a></li>
   <li>
-    <a href="/app/pages/populares/populares.html" class="flow-text"
-      >Populares</a
-    >
+    <a href="/app/pages/profile/profile.html" class="flow-text">Perfil</a>
+  </li>
+  <li>
+    <a href="#" class="flow-text">Pesquisar</a>
+  </li>
+  <li>
+    <a href="/app/pages/all-books/all-books.html" class="flow-text">Livros</a>
+  </li>
+  <li>
+    <button id="bt-exit">Sair</button>
   </li>
 </ul>
+
 <!-- fim menu -->

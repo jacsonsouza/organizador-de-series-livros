@@ -1,4 +1,6 @@
 const User = require('../model/user.js');
+const LocalStorage = require('node-localstorage').LocalStorage;
+let local = new LocalStorage('./scratch');
 
 module.exports = class Controller {
   static createUserSave(req, res) {
@@ -26,7 +28,6 @@ module.exports = class Controller {
 
     User.findOne({ where: { name: name } })
       .then((data) => {
-        console.log(localStorage.getItem('login'));
         if (!data) {
           return res.status(422).json({ msg: 'Usuário não encontrado' });
         }
@@ -34,8 +35,8 @@ module.exports = class Controller {
         if (password !== data.password) {
           return res.status(404).json({ msg: 'Senha inválida!' });
         }
-        localStorage.setItem('idUser', data.id);
-        res.cookie('login', 'true');
+        local.setItem('idUser', data.id);
+        res.cookie('logged', 'true');
         res.cookie('user', data.name);
         res.redirect('/book-list');
       })
@@ -43,12 +44,11 @@ module.exports = class Controller {
   }
 
   static userProfile(req, res) {
-    const id = localStorage.getItem('idUser');
+    const id = local.getItem('idUser');
 
     User.findOne({ where: { id: id } })
       .then((data) => {
-        console.log(data);
-        res.send(data);
+        return res.send(data);
       })
       .catch((err) => console.log('Deu errado' + err));
   }

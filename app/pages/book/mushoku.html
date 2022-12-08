@@ -12,9 +12,10 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
+    <link rel="icon" href="/assets/resources/images/logo.png" />
   </head>
   <body>
     <div id="menu"></div>
@@ -44,11 +45,7 @@
         </div>
         <!--Fim do bloco de cima-->
         <div id="select-read">
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            onchange="startRead(this)"
-          >
+          <select class="form-select" aria-label="Default select example">
             <option selected>Selecione</option>
             <option value="1" name="completo">Completo</option>
             <option value="2" name="lendo">Lendo</option>
@@ -66,22 +63,17 @@
             <p>Data de conclusão:</p>
           </div>
           <div id="info-rigth">
-            <p id="time-start">Início da leitura:</p>
-            <p id="time-end">Término da leitura:</p>
-            <p id="time-read">Duração da leitura:</p>
+            <p id="time-start">Início da leitura: 00/00/0000</p>
+            <p id="time-end">Término da leitura: 00/00/0000</p>
           </div>
         </div>
         <!--Fim do bloco de baixo-->
-        <hr />
-        <div id="questions">
-          <button id="bt-questions">Testar seus conhecimentos!</button>
-        </div>
       </div>
     </main>
     <div id="footer"></div>
     <script src="/node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="/app/pages/common.js"></script>
-    <script src="/app/pages/book/book.js"></script>
+    <script src="/node_modules//materialize-css/dist/js/materialize.js"></script>
+    <script type="module" src="/app/pages/common.js"></script>
+    <script type="module" src="/app/pages/book/book.js"></script>
   </body>
 </html>

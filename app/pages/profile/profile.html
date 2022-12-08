@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/resources/images/logo1.png">
     <link
       href="http://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -16,29 +15,39 @@
       href="/node_modules/materialize-css/dist/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/assets/resources/styles/style.css" />
+    <link rel="icon" href="/assets/resources/images/logo.png" />
   </head>
   <body>
-    <div id="menu"></div></div>
+    <div id="menu"></div>
     <div class="container">
-        <div class="profile-div">
-            <div id="image-profile">
-                <img class='profile-pic' src="https://filestore.community.support.microsoft.com/api/images/6061bd47-2818-4f2b-b04a-5a9ddb6f6467?upload=true" alt="">
-                <div class="upload-button">
-                  <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-                </div>
-                <input class="file-upload" type="file" accept="image/*"/>
-              </div>
-            <div id="profile-name">
-                <h2 id=""user-name>User name</h2>
-            </div>
+      <div class="profile-div">
+        <div id="image-profile">
+          <img
+            class="profile-pic"
+            src="https://filestore.community.support.microsoft.com/api/images/6061bd47-2818-4f2b-b04a-5a9ddb6f6467?upload=true"
+            alt=""
+          />
+          <div class="upload-button">
+            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+          </div>
+          <input class="file-upload" type="file" accept="image/*" />
         </div>
-        <hr>
-        <h1>Minha lista</h1>
-        <div class="list"></div>
+        <div id="profile-name">
+          <h2 id="" user-name>User name</h2>
+        </div>
+      </div>
+      <button id="bt-background">Mudar Background</button>
+      <hr />
+      <button id="bt-show-data">Ver Informações</button>
+      <div class="info-user">
+        <div id="data-user"></div>
+      </div>
+      <h4>Minha lista</h4>
+      <div class="list"></div>
     </div>
     <div id="footer"></div>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="/node_modules/materialize-css/dist/js/materialize.js"></script>
     <script type="module" src="/app/pages/common.js"></script>
     <script type="module" src="/app/pages/profile/profile.js"></script>
   </body>
